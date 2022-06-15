@@ -9,23 +9,21 @@
   <div class="sectionBox">
     <h2 style="padding: 0px; margin: 0px;">Convertible Bench/Table</h2>
 
-    Test informationTest information Test information
-    Test informationTest information Test information
-    Test informationTest information Test information
-    Test informationTest information Test information
-    Test informationTest information Test information
-    Test informationTest information Test information
-    Test informationTest information Test information
-    Test informationTest information Test information
+    Test information Test information Test information
+    Test information Test information Test information
+    Test information Test information Test information
+    Test information Test information Test information
+    Test information Test information Test information
   </div>
 
   <br>
 
   <div class="imageContainer">
-    <img class="image" src="Senior_Year_Engineering_Capstone_Project.gif">
-    <div id="viewin3D" class="sectionBox">View in 3D</div>
+    <div id="iframeHolder">
+      <img class="image" src="Senior_Year_Engineering_Capstone_Project.gif">
+      <div id="viewin3D" class="sectionBox">View in 3D</div>
+    </div>
   </div>
-
 
   <!-- <iframe src="https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43eeaf688337182486?mode=embed"
       width="600" height="475" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
@@ -38,43 +36,90 @@
   <br>
 
   <div class="sectionBox">
-    <h2>Metal Chair Project</h2>
-    Test informationTest informationTest information
-    Test informationTest informationTest information
+    <h2 style="padding: 0px; margin: 0px;">Metal Chair Project</h2>
+    Test information Test information Test information
+    Test information Test information Test information
   </div>
 
-  <div class="objectViewer">
-    <iframe src="https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43da228a37809cc03d?mode=embed"
-      width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
-      frameborder="0"></iframe>
+  <br>
+
+  <div class="imageContainer">
+    <div id="iframeHolder"></div>
+    <img class="image" src="Engineering_Metal_Bench_Load_Analysis_Project.jpg">
+    <div id="viewin3D" class="sectionBox">View in 3D</div>
   </div>
 
-</div>
+  <br>
 
-<h2>Metal Chair Project</h2>
+  <div class="sectionBox">
+    <h2 style="padding: 0px; margin: 0px;">Reverse Engineered RC Car to Dough Mixer Project</h2>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae architecto
+    libero
+  </div>
 
+  <br>
 
+  <div class="imageContainer">
+    <div id="iframeHolder"></div>
+    <img class="image" src="Reverse_Engineering_RC_Car_to_Mixer_Project.jpg">
+    <div id="viewin3D" class="sectionBox">View in 3D</div>
+  </div>
 
-<h2>Shipping</h2>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae architecto
-libero reprehenderit aliquam magnam ratione quidem? Nobis doloribus molestiae enim deserunt necessitatibus eaque
-quidem incidunt
+  <br>
 
-<h2>Returns</h2>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae architecto
-libero reprehenderit aliquam magnam ratione quidem? Nobis doloribus molestiae enim deserunt necessitatibus eaque
-quidem incidunt.
+  <div class="sectionBox">
+    <h2 style="padding: 0px; margin: 0px;">Re-Created Knife Handle</h2>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae architecto
+    libero
+  </div>
+
+  <br>
+
+  <div class="imageContainer">
+    <div id="iframeHolder"></div>
+    <img class="image" src="Knife_Handle.jpg">
+    <div id="viewin3D" class="sectionBox">View in 3D</div>
+  </div>
+
+  <br>
+
+  <div class="sectionBox">
+    <h2 style="padding: 0px; margin: 0px;">Washing Machine Drive Pulley Replacement</h2>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae architecto
+    libero
+  </div>
+
+  <br>
+
+  <div class="imageContainer">
+    <div id="iframeHolder"></div>
+    <img class="image" src="Washing_Machine_Pulley.gif">
+    <div id="viewin3D" class="sectionBox">View in 3D</div>
+  </div>
+
+  <br>
 
 </div>
 
 <br>
 
 <div id='bottomInfo' class="sectionBox" style=" text-align: center; width: 45%; left:25%; right:25%">
-  <div>Email: <a href="mailto:joeymg08@gmail.com" style="color:rgb(220, 220, 220)">Joeymg08@gmail.com </a> &emsp;
-    Address: Clifton, NJ 07013</div>
+  <div>Email: <a href="mailto:joeymg08@gmail.com" style="color:rgb(220, 220, 220)">Joeymg08@gmail.com </a> </div>
 </div>
 
 <br>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $('#viewin3D').click(function () {
+      if (!$('#iframe').length) {
+        $('#iframeHolder').html('<iframe id="iframe" src="https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43eeaf688337182486?mode=embed" width="600" height="475" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>');
+      }
+    });
+  });
+</script>
+
 
 <style>
   /* @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400'; */
@@ -144,6 +189,10 @@ quidem incidunt.
     min-width: 240px;
   }
 
+  #iframeHolder {
+    width: 100%;
+  }
+
   #viewin3D {
     position: absolute;
     padding: 5px 0px 5px 0px;
@@ -199,10 +248,10 @@ quidem incidunt.
     }
 
     #bottomInfo {
-    padding: 3px;
-    /* min-width: 70%; */
-    font-size: 2.2vw;
-  }
+      padding: 3px;
+      /* min-width: 70%; */
+      font-size: 2.2vw;
+    }
 
   }
 
@@ -239,10 +288,10 @@ quidem incidunt.
     }
 
     #bottomInfo {
-    padding: 3px;
-    /* min-width: 70%; */
-    font-size: 3vw;
-  }
+      padding: 3px;
+      /* min-width: 70%; */
+      font-size: 3vw;
+    }
 
   }
 
