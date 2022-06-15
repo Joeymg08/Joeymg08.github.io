@@ -8,43 +8,48 @@
 
   <div class="sectionBox">
     <h2 style="padding: 0px; margin: 0px;">Convertible Bench/Table</h2>
+    <div class="textBox">
+      As a capstone project for my senior year of high school,
+      I modeled what my team and I simply couldn't put down on paper.
+      Tasked with solving a problem using STEM, we conceptualized a convertible
+      bench to table design with a built-in distress button in cases of emergency.
 
-    Test information Test information Test information
-    Test information Test information Test information
-    Test information Test information Test information
-    Test information Test information Test information
-    Test information Test information Test information
+    </div>
   </div>
 
   <br>
 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    var benchTable = "https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43eeaf688337182486?mode=embed"
+
+    var left = (screen.width - 1050) / 2;
+    var top = (screen.height - 3350) / 2;
+
+  </script>
+
   <div class="imageContainer">
-    <div id="iframeHolder">
-      <img class="image" src="Senior_Year_Engineering_Capstone_Project.gif">
-      <div id="viewin3D" class="sectionBox">View in 3D</div>
-    </div>
+    <img class="image" src="Senior_Year_Engineering_Capstone_Project.gif">
+    <div id="viewin3D"
+      onclick="window.open(benchTable,'popUpWindow','height=550,width=1050,left=' + left +',top='+ top +',resizable=yes')"
+      class="sectionBox">View in 3D</div>
   </div>
-
-  <!-- <iframe src="https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43eeaf688337182486?mode=embed"
-      width="600" height="475" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
-      frameborder="0"></iframe> -->
-
-  <!-- <div class="objectViewer">
-
-  </div> -->
 
   <br>
 
   <div class="sectionBox">
     <h2 style="padding: 0px; margin: 0px;">Metal Chair Project</h2>
-    Test information Test information Test information
-    Test information Test information Test information
+
+    <div class="textBox">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum?
+    </div>
+
   </div>
 
   <br>
 
   <div class="imageContainer">
-    <div id="iframeHolder"></div>
     <img class="image" src="Engineering_Metal_Bench_Load_Analysis_Project.jpg">
     <div id="viewin3D" class="sectionBox">View in 3D</div>
   </div>
@@ -53,14 +58,16 @@
 
   <div class="sectionBox">
     <h2 style="padding: 0px; margin: 0px;">Reverse Engineered RC Car to Dough Mixer Project</h2>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae architecto
-    libero
+
+    <div class="textBox">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum?
+    </div>
+
   </div>
 
   <br>
 
   <div class="imageContainer">
-    <div id="iframeHolder"></div>
     <img class="image" src="Reverse_Engineering_RC_Car_to_Mixer_Project.jpg">
     <div id="viewin3D" class="sectionBox">View in 3D</div>
   </div>
@@ -69,14 +76,16 @@
 
   <div class="sectionBox">
     <h2 style="padding: 0px; margin: 0px;">Re-Created Knife Handle</h2>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae architecto
-    libero
+
+    <div class="textBox">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum?
+    </div>
+
   </div>
 
   <br>
 
   <div class="imageContainer">
-    <div id="iframeHolder"></div>
     <img class="image" src="Knife_Handle.jpg">
     <div id="viewin3D" class="sectionBox">View in 3D</div>
   </div>
@@ -85,14 +94,16 @@
 
   <div class="sectionBox">
     <h2 style="padding: 0px; margin: 0px;">Washing Machine Drive Pulley Replacement</h2>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae architecto
-    libero
+
+    <div class="textBox">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum?
+    </div>
+
   </div>
 
   <br>
 
   <div class="imageContainer">
-    <div id="iframeHolder"></div>
     <img class="image" src="Washing_Machine_Pulley.gif">
     <div id="viewin3D" class="sectionBox">View in 3D</div>
   </div>
@@ -108,18 +119,6 @@
 </div>
 
 <br>
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
-<script type="text/javascript">
-  $(function () {
-    $('#viewin3D').click(function () {
-      if (!$('#iframe').length) {
-        $('#iframeHolder').html('<iframe id="iframe" src="https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43eeaf688337182486?mode=embed" width="600" height="475" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>');
-      }
-    });
-  });
-</script>
-
 
 <style>
   /* @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400'; */
@@ -149,12 +148,14 @@
     margin: 0;
   }
 
-  .objectViewer {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
+  .textBox {
+    font-size: 1.2em;
+  }
 
+
+  .image {
+    border-radius: 1.5em;
+    width: 100%;
   }
 
   iframe {
@@ -171,8 +172,13 @@
   }
 
   .image {
-    border-radius: 1.5em;
+    border-radius: 2.5em;
     width: 100%;
+  }
+
+  .objectViewer {
+    height: auto;
+    width: 60%;
   }
 
   .sectionBox {
@@ -189,15 +195,11 @@
     min-width: 240px;
   }
 
-  #iframeHolder {
-    width: 100%;
-  }
-
   #viewin3D {
     position: absolute;
     padding: 5px 0px 5px 0px;
-    right: 19.75%;
-    bottom: 10px;
+    right: 20.25%;
+    bottom: 1vw;
     min-width: 110px;
     background-color: #428BFF;
     color: white;
@@ -221,6 +223,11 @@
       width: 60%;
     }
 
+    .objectViewer {
+      height: auto;
+      width: 60%;
+    }
+
   }
 
   @media all and (max-width: 950px) and (min-width: 600px) {
@@ -230,6 +237,14 @@
     }
 
     .image {
+      width: 100%;
+      height: auto;
+      margin-left: 1vw;
+      margin-right: 1vw;
+      border-radius: 1.5em;
+    }
+
+    .objectViewer {
       width: 100%;
       height: auto;
     }
@@ -243,20 +258,25 @@
     }
 
     #viewin3D {
-      right: 5px;
-      bottom: 15px;
+      right: 0;
+      bottom: 1.75vw;
+      font-size: 3vw;
+      padding: 0.5vw 1.5vw;
+    }
+
+    #iframe {
+      height: 100%;
     }
 
     #bottomInfo {
       padding: 3px;
-      /* min-width: 70%; */
       font-size: 2.2vw;
     }
 
   }
 
 
-  @media all and (max-width: 600px) and (min-width: 350px) {
+  @media all and (max-width: 600px) and (min-width: 280px) {
     .sectionBox ul li label {
       font-size: 2.5vw;
     }
@@ -276,6 +296,22 @@
     .image {
       width: 100%;
       height: auto;
+      margin-left: 1vw;
+      margin-right: 1vw;
+      border-radius: 1.5em;
+    }
+
+    .objectViewer {
+      width: 100%;
+      height: auto;
+    }
+
+    .textBox {
+      font-size: 4vw;
+    }
+
+    content {
+      width: 100%;
     }
 
     body h1 {
@@ -283,13 +319,13 @@
     }
 
     #viewin3D {
-      right: 5px;
-      bottom: 10px;
+      right: .5vw;
+      bottom: 2.5vw;
     }
 
     #bottomInfo {
+      right: 1vw;
       padding: 3px;
-      /* min-width: 70%; */
       font-size: 3vw;
     }
 
