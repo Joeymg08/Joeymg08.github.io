@@ -1,4 +1,6 @@
-﻿<h1 class="header" style="color: rgb(220, 220, 220); font-weight: bolder;">
+﻿<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<h1 class="header" style="color: rgb(220, 220, 220); font-weight: bolder;">
   Joey Giordano</h1>
 <h1 style="padding: 0; padding-bottom: 7px">Design Portfolio</h1>
 
@@ -7,25 +9,31 @@
   <div class="sectionBox">
     <h2 style="padding: 0px; margin: 0px;">Convertible Bench/Table</h2>
 
-      Test informationTest information Test information
-      Test informationTest information Test information
-      Test informationTest information Test information
-      Test informationTest information Test information
-      Test informationTest information Test information
-      Test informationTest information Test information
-      Test informationTest information Test information
-      Test informationTest information Test information
+    Test informationTest information Test information
+    Test informationTest information Test information
+    Test informationTest information Test information
+    Test informationTest information Test information
+    Test informationTest information Test information
+    Test informationTest information Test information
+    Test informationTest information Test information
+    Test informationTest information Test information
   </div>
 
-  <div class="objectviewer">
-    <iframe src="https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43eeaf688337182486?mode=embed"
+  <br>
+
+  <div class="imageContainer">
+    <img class="image" src="Senior_Year_Engineering_Capstone_Project.gif">
+    <div id="viewin3D" class="sectionBox">View in 3D</div>
+  </div>
+
+
+  <!-- <iframe src="https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43eeaf688337182486?mode=embed"
       width="600" height="475" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
-      frameborder="0"></iframe </div>
-  </div>
-  
-  <div class="image">
-    <img src="Senior_Year_Engineering_Capstone_Project.gif" style="width:600px;height:360px;">
-  </div>
+      frameborder="0"></iframe> -->
+
+  <!-- <div class="objectViewer">
+
+  </div> -->
 
   <br>
 
@@ -35,7 +43,7 @@
     Test informationTest informationTest information
   </div>
 
-  <div class="objectviewer">
+  <div class="objectViewer">
     <iframe src="https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43da228a37809cc03d?mode=embed"
       width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
       frameborder="0"></iframe>
@@ -59,11 +67,14 @@ quidem incidunt.
 
 </div>
 
+<br>
 
-<div id='bottomInfo' class="sectionBox" style=" text-align: center;">
-  <div>Email: <a href="mailto:joeymg08@gmail.com" style="color:rgb(220, 220, 220) ;">Joeymg08@gmail.com </a> &emsp;
+<div id='bottomInfo' class="sectionBox" style=" text-align: center; width: 45%; left:25%; right:25%">
+  <div>Email: <a href="mailto:joeymg08@gmail.com" style="color:rgb(220, 220, 220)">Joeymg08@gmail.com </a> &emsp;
     Address: Clifton, NJ 07013</div>
 </div>
+
+<br>
 
 <style>
   /* @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400'; */
@@ -77,7 +88,7 @@ quidem incidunt.
   .header {
     font-size: 3.5vw;
   }
-  
+
   body {
     background: #262626;
     color: rgb(220, 220, 220);
@@ -93,28 +104,39 @@ quidem incidunt.
     margin: 0;
   }
 
-  .image{
-    text-align: left;
-    border-radius: 20px;
-  }
-
-  .objectviewer {
+  .objectViewer {
     position: relative;
     overflow: hidden;
-    text-align: left;
-    padding: 10px;
+    text-align: center;
+    padding: 20px;
+
   }
 
   iframe {
-    border-radius: 20px;
-    float: right;
+    border-radius: 1.5em;
+    width: 50%;
+    height: 25em;
+  }
+
+  .imageContainer {
+    height: auto;
+    width: auto;
+    position: relative;
+    text-align: center;
+  }
+
+  .image {
+    border-radius: 1.5em;
+    width: 100%;
   }
 
   .sectionBox {
     position: relative;
     background: rgb(60, 60, 60);
 
-    padding: 25px;
+    padding: 30px;
+    margin-left: 1vw;
+    margin-right: 1vw;
 
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border-radius: 2.5em;
@@ -122,22 +144,68 @@ quidem incidunt.
     min-width: 240px;
   }
 
-  /* ::-webkit-scrollbar {
-    display: none;
-  } */
+  #viewin3D {
+    position: absolute;
+    padding: 5px 0px 5px 0px;
+    right: 19.75%;
+    bottom: 10px;
+    min-width: 110px;
+    background-color: #428BFF;
+    color: white;
+    cursor: pointer;
+  }
 
   #bottomInfo {
-    padding: 3px !important;
+    padding: 3px;
+    min-width: 100px;
   }
 
   /* Joey Giordano */
-  @media all and (max-width: 1150px) and (min-width: 600px) {
+  @media all and (min-width: 850px) {
+
+    .header {
+      font-size: 3.5vw;
+    }
+
+    .image {
+      height: auto;
+      width: 60%;
+    }
+
+  }
+
+  @media all and (max-width: 950px) and (min-width: 600px) {
+
+    .imageContainer {
+      width: 100%;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+    }
 
     .header {
       font-size: 8vw;
     }
 
+    body h1 {
+      font-size: 2.5em;
+    }
+
+    #viewin3D {
+      right: 5px;
+      bottom: 15px;
+    }
+
+    #bottomInfo {
+    padding: 3px;
+    /* min-width: 70%; */
+    font-size: 2.2vw;
   }
+
+  }
+
 
   @media all and (max-width: 600px) and (min-width: 350px) {
     .sectionBox ul li label {
@@ -145,12 +213,37 @@ quidem incidunt.
     }
 
     .header {
-      font-size: 8vw;
+      font-size: 2.8em;
     }
+
+    .sectionBox .content {
+      margin-top: 30px;
+    }
+
+    .imageContainer {
+      width: 100%;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+    }
+
+    body h1 {
+      font-size: 1.5em;
+    }
+
+    #viewin3D {
+      right: 5px;
+      bottom: 10px;
+    }
+
+    #bottomInfo {
+    padding: 3px;
+    /* min-width: 70%; */
+    font-size: 3vw;
   }
 
-  .sectionBox .content {
-    margin-top: 30px;
   }
 
   .sectionBox .content section {
