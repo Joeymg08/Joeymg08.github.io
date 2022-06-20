@@ -9,14 +9,6 @@
     animation-fill-mode: forwards;
   } */
 
-  /* 
-  h1, body, ul, image {
-    -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
-    -webkit-transition: width 1s ease-in-out, left 1.5s ease-in-out;
-    -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
-    -o-transition: width 1s ease-in-out, left 1.5s ease-in-out;
-    transition: width 1s ease-in-out, left 1.5s ease-in-out;
-} */
 
   div {
     animation: fadeInUp ease 1s;
