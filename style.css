@@ -9,6 +9,14 @@
     animation-fill-mode: forwards;
   } */
 
+  /* 
+  h1, body, ul, image {
+    -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+    -webkit-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+    -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+    -o-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+    transition: width 1s ease-in-out, left 1.5s ease-in-out;
+} */
 
   div {
     animation: fadeInUp ease 1s;
@@ -114,12 +122,6 @@
     color: white;
   }
 
-
-  .image {
-    border-radius: 1.5em;
-    width: 100%;
-  }
-
   iframe {
     border-radius: 1.5em;
     width: 50%;
@@ -197,6 +199,109 @@
     margin: auto;
   }
 
+
+  /* image gallery */
+
+  * {
+    box-sizing: border-box
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 63%;
+    position: relative;
+    margin: auto;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    border-radius: 2.5em;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.6s ease;
+    border-radius: 0 10px 10px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.150);
+  }
+
+  .next {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .activeDot,
+  .dot:hover {
+    background-color: #717171;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+      font-size: 11px
+    }
+  }
+
+
+  /* image gallery */
+
+
   /* Joey Giordano */
   @media all and (min-width: 850px) {
 
@@ -216,7 +321,7 @@
       width: 60%;
     }
 
-    .spacer{
+    .spacer {
       height: 0;
     }
 
@@ -281,7 +386,7 @@
       border-radius: 1.5em;
     }
 
-    .spacer{
+    .spacer {
       height: 1.5vw;
     }
 
@@ -329,7 +434,6 @@
     .column {
       width: 100%;
       padding-left: 0;
-      
     }
 
     .columnText {
@@ -341,6 +445,23 @@
       width: 60%;
     }
 
+    .slideshow-container, .mySlides {
+      max-width: 100%;
+      border-radius: 1.5em;
+    }
+    
+    .prev, .next{
+      background-color: rgba(0, 0, 0, 0);
+    
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .dot{
+      display: none;
+    }
+
     .imageLink {
       inline-size: 35%;
       border-radius: 1.5em;
@@ -350,8 +471,8 @@
       right: 1.5vw;
       bottom: 3vw;
     }
-    
-    .spacer{
+
+    .spacer {
       height: 1.5vw;
     }
 
