@@ -9,7 +9,7 @@
     animation-fill-mode: forwards;
   } */
 
-/* 
+  /* 
   h1, body, ul, image {
     -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
     -webkit-transition: width 1s ease-in-out, left 1.5s ease-in-out;
@@ -84,8 +84,8 @@
   .topNav a.active {
     color: #428BFF;
   }
-  
-  ul{
+
+  ul {
     padding-inline-start: 0;
   }
 
@@ -160,6 +160,31 @@
     min-width: 240px;
   }
 
+  .column {
+    color: white;
+    padding: 2vw;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 35%;
+  }
+
+  .columnText {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+  }
+
+  .imageLink {
+    inline-size: 10vw;
+    border-radius: 1em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
   #viewin3D {
     position: absolute;
     padding: 5px 0px 5px 0px;
@@ -199,6 +224,10 @@
       width: 60%;
     }
 
+    .spacer{
+      height: 0;
+    }
+
     #viewin3D {
       font-size: 1.25vw;
       padding: 0.5vw;
@@ -231,6 +260,19 @@
       font-size: 2.5em;
     }
 
+    .column {
+      width: 70%;
+    }
+
+    .columnText {
+      color: white;
+      font-style: italic;
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+      width: 60%;
+    }
+
     #viewin3D {
       right: 2vw;
       bottom: 2.75vw;
@@ -240,6 +282,15 @@
 
     #iframe {
       height: 100%;
+    }
+
+    .imageLink {
+      inline-size: 25%;
+      border-radius: 1.5em;
+    }
+
+    .spacer{
+      height: 1.5vw;
     }
 
     .bottomInfo {
@@ -283,9 +334,33 @@
       font-size: 1.5em;
     }
 
+    .column {
+      width: 100%;
+      padding-left: 0;
+      
+    }
+
+    .columnText {
+      color: white;
+      font-style: italic;
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+      width: 60%;
+    }
+
+    .imageLink {
+      inline-size: 35%;
+      border-radius: 1.5em;
+    }
+
     #viewin3D {
       right: 1.5vw;
       bottom: 3vw;
+    }
+    
+    .spacer{
+      height: 1.5vw;
     }
 
     .bottomInfo {
