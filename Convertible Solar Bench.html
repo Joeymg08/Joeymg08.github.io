@@ -2,35 +2,13 @@
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="imageGallery.css">
+
+<div id="fullscreen"><div id="exit" onclick="closeFullscreen()">Exit</div></div>
 
 <h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
     Joey Giordano</h1>
 <h1>Design Portfolio</h1>
-
-<!-- Navbar -->
-
-<style>
-    .topNav {
-        overflow: hidden;
-        text-align: center;
-    }
-
-    .topNav a {
-        color: rgb(220, 220, 220);
-        /* padding: 14px 16px; */
-        text-decoration: none;
-        font-size: 17px;
-        word-wrap: break-word;
-    }
-
-    .topNav a:hover {
-        color: #a1b8de;
-    }
-
-    .topNav a.active {
-        color: #428BFF;
-    }
-</style>
 
 <ul class="topNav">
     <a href="index.html">About</a>
@@ -40,6 +18,14 @@
     <a href="Knife Handle.html">Knife Handle</a>
     <a href="Drive Pulley.html">Drive Pulley</a>
 </ul>
+
+<ul class="mobileNav" style="text-align:center;">
+    <a class="active">Home</a>
+    <div class="downArrow">
+        <div>▼</div>
+    </div>
+</ul>
+
 <!-- Navbar -->
 
 <div class="sectionBox">
@@ -58,11 +44,16 @@
 
 <div class="imageContainer">
     <img class="image" src="images/Convertible_Solar_Bench.gif">
-    <div id="viewin3D"
+    <!-- <div id="viewin3D"
         onclick="window.open(Bench_Table,'popUpWindow','height=550,width=1050,left=' + left +',top='+ 200 +',resizable=yes')"
         class="sectionBox">View in 3D
+    </div> -->
+    <div id="viewin3D" onclick="openFullscreen(bench)" 
+    class="sectionBox">View in 3D
     </div>
 </div>
+
+
 
 <br>
 
@@ -71,11 +62,12 @@
 
     <div class="spacer"></div>
 
-    <div class="slideshow-container">
+    <div class="slideshow-container" id="csBenchGallery">
 
-        <img class="mySlides" src="images/CSbenchprogress1.jpg" style="width:100%">
-        <img class="mySlides" src="images/Knife_Handle 1 side.jpg" style="width:100%">
-        <img class="mySlides" src="images/Dough_Mixer.jpg" style="width:100%">
+        <img class="mySlides" src="images/CSbench1.jpg" style="width:100%">
+        <!-- <div class="text">Caption one</div> -->
+        <img class="mySlides" src="images/tableFlip.gif" style="width:100%">
+        <img class="mySlides" src="images/CSbench2.jpg" style="width:100%">
 
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

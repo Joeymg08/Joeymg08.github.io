@@ -8,7 +8,7 @@ var Dough_Mixer = "https://montclair225.autodesk360.com/g/shares/SH35dfcQT936092
 var Knife_Handle = "https://montclair225.autodesk360.com/g/shares/SH35dfcQT936092f0e434b0caddc08fb620a?mode=embed";
 var Drive_Pulley = "https://montclair225.autodesk360.com/g/shares/SH35dfcQT936092f0e43fd87fc9973054022?mode=embed";
 
-
+var bench = '<iframe src="https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43eeaf688337182486?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>' 
 
 // image gallery
 let slideIndex = 1;
@@ -37,3 +37,22 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " activeDot";
 }
+
+// function openFullScreen(content){
+//   fullscreen = document.getElementById("fullscreen");
+//   fullscreen.replaceChild(content,content);
+//   fullscreen = "block";
+// }
+
+fullscreenContent = document.getElementById("fullscreen");
+
+function openFullscreen(content) {
+  fullscreenContent.innerHTML += content;
+  fullscreenContent.style.display = "block";
+}
+
+function closeFullscreen(){
+  fullscreenContent.innerHTML = '<div id="exit" onclick="closeFullscreen()">Exit</div>'
+  fullscreenContent.style.display = "none";
+}
+

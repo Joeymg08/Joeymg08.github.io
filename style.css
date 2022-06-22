@@ -1,23 +1,5 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-
-  /* <!-- Animation Load in --> */
-
-  /* h1, ul {
-    animation: fadeIn cubic-bezier(.57,.21,.69,1.25) 1.7s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  } */
-
-  /* 
-  h1, body, ul, image {
-    -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
-    -webkit-transition: width 1s ease-in-out, left 1.5s ease-in-out;
-    -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
-    -o-transition: width 1s ease-in-out, left 1.5s ease-in-out;
-    transition: width 1s ease-in-out, left 1.5s ease-in-out;
-} */
-
   div {
     animation: fadeInUp ease 1s;
     animation-iteration-count: 1;
@@ -54,6 +36,21 @@
     }
   }
 
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .zoomIn {
+    animation-name: zoomIn;
+  }
+
   .animate__fadeInUp {
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
@@ -67,6 +64,10 @@
   .topNav {
     overflow: hidden;
     text-align: center;
+  }
+
+  .mobileNav {
+    display: none;
   }
 
   .topNav a {
@@ -85,12 +86,36 @@
     color: #428BFF;
   }
 
+
   ul {
     padding-inline-start: 0;
   }
 
   /* <!-- Navbar --> */
 
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #707070 #dbdbdb;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #3e3e3e6a;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(138, 138, 138, 0.808);
+    border-radius: 10px;
+  }
+
+  /* ===== Scrollbar CSS ===== */
 
   html {
     width: 100%;
@@ -100,6 +125,43 @@
   .header {
     font-size: 3.5vw;
   }
+
+  #fullscreen {
+    display: none;
+    position: fixed;
+    text-align: center;
+    right: 1vw;
+    left: 1vw;
+    top: 1vw;
+    bottom: 1vw;
+    z-index: 10;
+    background: rgb(60, 60, 60);
+    padding: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 2.5em;
+
+    animation: zoomIn ease-out 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  #exit {
+    position: fixed;
+    min-width: 110px;
+    font-size: 1.5vw;
+    padding: 0.5vw;
+    padding-left: 0.75vw;
+    padding-right: 0.75vw;
+    bottom: 2.5vw;
+    right: 2.5vw;
+    background-color: #428BFF;
+    color: #FFF;
+    text-align: center;
+    border-radius: 2.5em;
+    z-index: 11;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  #exit:hover{cursor:pointer;}
 
   body {
     background: #262626;
@@ -124,8 +186,8 @@
 
   iframe {
     border-radius: 1.5em;
-    width: 50%;
-    height: 25em;
+    height: 100%;
+    width: 100%;
   }
 
   .imageContainer {
@@ -181,7 +243,7 @@
 
   #viewin3D {
     position: absolute;
-    padding: 5px 0px 5px 0px;
+    padding: 1.5vw 0px 1.5vw 0px;
     right: 16.75em;
     bottom: 1.5vw;
     min-width: 110px;
@@ -199,107 +261,13 @@
     margin: auto;
   }
 
-
-  /* image gallery */
-
-  * {
-    box-sizing: border-box
-  }
-
-  /* Slideshow container */
-  .slideshow-container {
+  #csBenchGallery {
     max-width: 63%;
-    position: relative;
-    margin: auto;
   }
 
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-    border-radius: 2.5em;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  #knifeHandleGallery {
+    max-width: 35%;
   }
-
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-    transition: 0.6s ease;
-    border-radius: 0 10px 10px 0;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.150);
-  }
-
-  .next {
-    right: 0;
-    border-radius: 10px 0 0 10px;
-  }
-
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-
-
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 8px;
-    width: 8px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  .activeDot,
-  .dot:hover {
-    background-color: #717171;
-  }
-
-  @keyframes fade {
-    from {
-      opacity: .4
-    }
-
-    to {
-      opacity: 1
-    }
-  }
-
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-
-    .prev,
-    .next,
-    .text {
-      font-size: 11px
-    }
-  }
-
-
-  /* image gallery */
 
 
   /* Joey Giordano */
@@ -328,10 +296,13 @@
     #viewin3D {
       font-size: 1.25vw;
       padding: 0.5vw;
+      padding-left: 0.75vw;
+      padding-right: 0.75vw;
     }
 
   }
 
+  /* tablet */
   @media all and (max-width: 950px) and (min-width: 600px) {
 
     .imageContainer {
@@ -351,6 +322,18 @@
 
     .header {
       font-size: 8vw;
+    }
+
+    .topNav {
+      display: block;
+    }
+
+    .topNav a {
+      font-size: 3.5vw;
+    }
+
+    .mobileNav {
+      display: none;
     }
 
     body h1 {
@@ -377,6 +360,13 @@
       padding: 0.75vw 1.75vw;
     }
 
+    #exit{
+      right: 2vw;
+      bottom: 2.75vw;
+      font-size: 3vw;
+      padding: 0.75vw 1.75vw;
+    }
+
     #iframe {
       height: 100%;
     }
@@ -395,12 +385,97 @@
       font-size: 2.2vw;
     }
 
+    #csBenchGallery {
+      max-width: 100%;
+    }
+
+    #knifeHandleGallery {
+      max-width: 100%;
+    }
+
   }
 
-
+  /* smartphone */
   @media all and (max-width: 600px) and (min-width: 280px) {
     .sectionBox ul li label {
       font-size: 2.5vw;
+    }
+
+    .topNav {
+      display: none;
+    }
+
+    .mobileNav {
+      display: block;
+      position: relative;
+      background: rgb(60, 60, 60);
+      padding: 20px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      border-radius: 1.5em;
+      min-width: 150px;
+    }
+
+    .mobileNav a {
+      text-decoration: none;
+      font-size: 7vw;
+    }
+
+    .pullBar {
+      background-color: white;
+      height: 4px;
+      width: 100px;
+      border-radius: 3em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: 0px;
+      margin-left: -50px;
+    }
+
+
+
+
+    .mobileNav:hover {
+      max-height: 30em;
+      background: darken(#00b8c9, 15%);
+    }
+
+    .mobileNav {
+      -webkit-transition: max-height 1s;
+      -moz-transition: max-height 1s;
+      -ms-transition: max-height 1s;
+      -o-transition: max-height 1s;
+      transition: max-height 1s;
+      overflow: hidden;
+      max-height: 80px;
+    }
+
+    .dropDownItems {
+      padding: 0 15px;
+    }
+
+    .mobileNav {
+      -webkit-transition: background .1s linear;
+      -moz-transition: background .1s linear;
+      -ms-transition: background .1s linear;
+      -o-transition: background .1s linear;
+      transition: background .1s linear;
+
+    }
+
+
+    .downArrow {
+      height: 15vw;
+      width: 15vw;
+      background: rgb(80, 80, 80);
+      padding: 20px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      border-radius: 1em;
+      text-align: center;
+      right: 5px;
+      top: 5px;
+      margin-left: auto;
+      margin-bottom: auto;
     }
 
     .header {
@@ -445,20 +520,30 @@
       width: 60%;
     }
 
-    .slideshow-container, .mySlides {
+    .slideshow-container,
+    .mySlides {
       max-width: 100%;
       border-radius: 1.5em;
     }
-    
-    .prev, .next{
+
+    #csBenchGallery {
+      max-width: 100%;
+    }
+
+    #knifeHandleGallery {
+      max-width: 100%;
+    }
+
+    .prev,
+    .next {
       background-color: rgba(0, 0, 0, 0);
-    
+
       display: inline-block;
       vertical-align: middle;
       text-align: center;
     }
 
-    .dot{
+    .dot {
       display: none;
     }
 
@@ -470,6 +555,13 @@
     #viewin3D {
       right: 1.5vw;
       bottom: 3vw;
+    }
+
+    #exit{
+      right: 1.5vw;
+      bottom: 3vw;
+      font-size: 5vw;
+      padding: 0.75vw 1.75vw;
     }
 
     .spacer {
