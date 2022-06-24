@@ -3,11 +3,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="imageGallery.css">
+<link rel="stylesheet" href="mobileNav.css">
+
+<div id="fullscreen"><div id="exit" onclick="closeFullscreen()">Exit</div></div>
 
 <h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
     Joey Giordano</h1>
 <h1>Design Portfolio</h1>
 
+<!-- Navbar -->
 <ul class="topNav">
     <a href="index.html">About</a>
     <a href="Convertible Solar Bench.html">Convertible Solar Bench</a>
@@ -18,14 +22,12 @@
 </ul>
 <!-- Navbar -->
 
-<script type="text/javascript" src="scripts.js"></script>
-
 <div class="sectionBox">
     <h2 style="padding: 0px; margin: 0px;">Reverse Engineered RC Car to Dough Mixer Project</h2>
 
     <div class="textBox">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in malesuada sem. Donec justo purus, feugiat
-    non arcu eget, imperdiet luctus dolor.
+        non arcu eget, imperdiet luctus dolor.
     </div>
 
 </div>
@@ -34,13 +36,12 @@
 
 <div class="imageContainer">
     <img class="image" src="images/Dough_Mixer.jpg">
-    <div id="viewin3D"
-        onclick="window.open(Dough_Mixer,'popUpWindow','height=550,width=1050,left=' + left +',top='+ 200 +',resizable=yes')"
-        class="sectionBox">View in 3D
-    </div>
+    <div id="viewin3D" onclick="openFullscreen(Dough_Mixer)" class="sectionBox">View in 3D </div>
 </div>
 
 <br>
+
+<script type="text/javascript" src="scripts.js"></script>
 
 <div id='bottomInfo' class="sectionBox">
     <div>Email: <a href="mailto:joeymg08@gmail.com" style="color:rgb(255, 255, 255)">Joeymg08@gmail.com </a> </div>

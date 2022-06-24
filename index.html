@@ -3,9 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="imageGallery.css">
-<link rel="html" href="imageGallery.css">
+<link rel="stylesheet" href="mobileNav.css">
 
-<div id="fullscreen"> <div id="exit" onclick="closeFullscreen()">Exit</div></div>
+<div id="fullscreen">
+  <div id="exit" onclick="closeFullscreen()">Exit</div>
+</div>
 
 <h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
   Joey Giordano</h1>
@@ -22,14 +24,15 @@
 
 <ul class="mobileNav" style="text-align:center;">
   <a class="active">Home</a>
-  <div style="position:relative">
-    <div class="pullBar">
-      <div class="dropDownItems"> 
-        <a class="active">Metal Chair</a>
-        <a class="active">Dough Mixer</a>
-        <a class="active">Test3</a>
-        <a class="active">Test4</a>
-    </div>
+  <a class="arrowContainer"> <nav class="arrow"></nav> </a>
+  <div class="dropDownItems" style="display: none;">
+    <a class="active">Metal Chair</a>
+    <br>
+    <a class="active">Dough Mixer</a>
+    <br>
+    <a class="active">Test3</a>
+    <br>
+    <a class="active">Test4</a>
   </div>
 </ul>
 

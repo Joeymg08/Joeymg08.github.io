@@ -140,7 +140,7 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border-radius: 2.5em;
 
-    animation: zoomIn ease-out 0.5s;
+    animation: zoomIn ease-out 0.35s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
@@ -332,10 +332,6 @@
       font-size: 3.5vw;
     }
 
-    .mobileNav {
-      display: none;
-    }
-
     body h1 {
       font-size: 2.5em;
     }
@@ -403,79 +399,6 @@
 
     .topNav {
       display: none;
-    }
-
-    .mobileNav {
-      display: block;
-      position: relative;
-      background: rgb(60, 60, 60);
-      padding: 20px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      border-radius: 1.5em;
-      min-width: 150px;
-    }
-
-    .mobileNav a {
-      text-decoration: none;
-      font-size: 7vw;
-    }
-
-    .pullBar {
-      background-color: white;
-      height: 4px;
-      width: 100px;
-      border-radius: 3em;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: 0px;
-      margin-left: -50px;
-    }
-
-
-
-
-    .mobileNav:hover {
-      max-height: 30em;
-      background: darken(#00b8c9, 15%);
-    }
-
-    .mobileNav {
-      -webkit-transition: max-height 1s;
-      -moz-transition: max-height 1s;
-      -ms-transition: max-height 1s;
-      -o-transition: max-height 1s;
-      transition: max-height 1s;
-      overflow: hidden;
-      max-height: 80px;
-    }
-
-    .dropDownItems {
-      padding: 0 15px;
-    }
-
-    .mobileNav {
-      -webkit-transition: background .1s linear;
-      -moz-transition: background .1s linear;
-      -ms-transition: background .1s linear;
-      -o-transition: background .1s linear;
-      transition: background .1s linear;
-
-    }
-
-
-    .downArrow {
-      height: 15vw;
-      width: 15vw;
-      background: rgb(80, 80, 80);
-      padding: 20px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      border-radius: 1em;
-      text-align: center;
-      right: 5px;
-      top: 5px;
-      margin-left: auto;
-      margin-bottom: auto;
     }
 
     .header {

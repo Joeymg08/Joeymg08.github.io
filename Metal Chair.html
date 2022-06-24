@@ -3,6 +3,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="imageGallery.css">
+<link rel="stylesheet" href="mobileNav.css">
+
+<div id="fullscreen"><div id="exit" onclick="closeFullscreen()">Exit</div></div>
 
 <h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
     Joey Giordano</h1>
@@ -29,17 +32,14 @@
 
 <br>
 
-<script type="text/javascript" src="scripts.js"></script>
-
 <div class="imageContainer">
     <img class="image" src="images/Metal_Chair.jpg">
-    <div id="viewin3D"
-        onclick="window.open(Metal_Chair,'popUpWindow','height=550,width=1050,left=' + left +',top='+ 200 +',resizable=yes')"
-        class="sectionBox">View in 3D
-    </div>
+    <div id="viewin3D" onclick="openFullscreen(Metal_Chair)" class="sectionBox">View in 3D </div>
 </div>
 
 <br>
+
+<script type="text/javascript" src="scripts.js"></script>
 
 <div id='bottomInfo' class="sectionBox">
     <div>Email: <a href="mailto:joeymg08@gmail.com" style="color:rgb(255, 255, 255)">Joeymg08@gmail.com </a> </div>
