@@ -443,18 +443,16 @@
       width: 60%;
     }
 
-    .slideshow-container,
-    .mySlides {
-      max-width: 100%;
-      border-radius: 1.5em;
-    }
-
     #csBenchGallery {
       max-width: 100%;
     }
 
     #knifeHandleGallery {
       max-width: 100%;
+    }
+    
+    .mySlides{
+      pointer-events: none;
     }
 
     .prev,
