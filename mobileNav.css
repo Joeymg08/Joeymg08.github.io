@@ -27,7 +27,47 @@
         transition: background .1s linear;
     }
 
-    .pageSelector {
+
+    .navContainer{
+        position:relative;
+        left:5vw;
+    }
+
+    .arrowDown{
+        position: relative;
+        width: 0;
+        height: 0;
+        transition: 0.5s;
+        border-radius: 2.5em;
+        transform-origin: right center;
+      }
+    
+
+    .arrowDown:after{
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0.8vw;
+        background: white;
+        width: 1rem;
+        height: 0.2rem;
+        transform-origin: 0.1rem center;
+        transition: 0.5s;
+        border-radius: 1rem;
+      }
+
+      .arrowDown:after {
+        transform: rotate(135deg);
+        width: 2em;
+      }
+
+      .arrowDown:before {
+        transform: rotate(225deg);
+        width: 2em;
+      }
+    
+
+    /* .pageSelector {
         overflow: auto;
         white-space: nowrap;
         border-radius: 2.5em;
@@ -35,7 +75,7 @@
       }
       .scrollmenu::-webkit-scrollbar {
         display: none;
-      }
+      } */
       
 
 }
