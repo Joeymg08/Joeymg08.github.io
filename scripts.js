@@ -5,6 +5,14 @@ var Knife_Handle = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT
 var Drive_Pulley = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43fd87fc9973054022?mode=embed';
 fullscreenContent = document.getElementById("fullscreen");
 
+//mobile navigation animation
+function openNav() {
+  document.getElementById("mobileNavOverlay").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mobileNavOverlay").style.height = "0%";
+}
 
 // image gallery
 let slideIndex = 1;
