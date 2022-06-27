@@ -1,8 +1,8 @@
-var Bench_Table = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43eeaf688337182486?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" ';
-var Metal_Chair = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43da228a37809cc03d?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" ';
-var Dough_Mixer = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e436fdc65471082c9f8?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" ';
-var Knife_Handle = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e4375461eea497cc455?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" ';
-var Drive_Pulley = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43fd87fc9973054022?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" ';
+var Bench_Table = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43eeaf688337182486?mode=embed';
+var Metal_Chair = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43da228a37809cc03d?mode=embed';
+var Dough_Mixer = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e436fdc65471082c9f8?mode=embed';
+var Knife_Handle = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e4375461eea497cc455?mode=embed';
+var Drive_Pulley = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43fd87fc9973054022?mode=embed';
 fullscreenContent = document.getElementById("fullscreen");
 
 
