@@ -9,10 +9,29 @@
   <div id="exit" onclick="closeFullscreen()">Exit</div>
 </div>
 
-<h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
-  Joey Giordano</h1>
-<h1 style="padding: 0; padding-bottom: 7px">Design Portfolio</h1>
+<nav id="mobileNavHeader">
+  <h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
+    Joey Giordano</h1>
+  <h1 class="designPortfolio">Design Portfolio</h1>
+  <nav class="mobileNavContainer" onclick="openNav()">
+    <nav>Design Portfolio</nav>
+    <nav class="arrowContainer">
+      <nav class="arrowIcon"></nav>
+    </nav>
 
+    <nav id="mobileNavOverlay" class="overlay">
+      <a href="javascript:closeNav()" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="index.html">About</a>
+        <a href="Convertible Solar Bench.html">Convertible Solar Bench</a>
+        <a href="Metal Chair.html">Metal Chair</a>
+        <a href="Dough Mixer.html">Dough Mixer</a>
+        <a href="Knife Handle.html">Knife Handle</a>
+        <a href="Drive Pulley.html">Drive Pulley</a>
+      </div>
+    </nav>
+  </nav>
+</nav>
 
 <ul class="topNav">
   <a class="active" href="index.html">About</a>
@@ -34,7 +53,7 @@
   <div class="textBox">
 
     Hi, I'm Joey Giordano. I am from Clifton, NJ and have been passionate about deisgn ever since I can remember.
-    
+
 
   </div>
 </div>

@@ -9,9 +9,29 @@
     <div id="exit" onclick="closeFullscreen()">Exit</div>
 </div>
 
-<h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
-    Joey Giordano</h1>
-<h1>Design Portfolio</h1>
+<nav id="mobileNavHeader">
+    <h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
+        Joey Giordano</h1>
+    <h1 class="designPortfolio">Design Portfolio</h1>
+    <nav class="mobileNavContainer" onclick="openNav()">
+        <nav>Design Portfolio</nav>
+        <nav class="arrowContainer">
+            <nav class="arrowIcon"></nav>
+        </nav>
+
+        <nav id="mobileNavOverlay" class="overlay">
+            <a href="javascript:closeNav()" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="index.html">About</a>
+                <a href="Convertible Solar Bench.html">Convertible Solar Bench</a>
+                <a href="Metal Chair.html">Metal Chair</a>
+                <a href="Dough Mixer.html">Dough Mixer</a>
+                <a href="Knife Handle.html">Knife Handle</a>
+                <a href="Drive Pulley.html">Drive Pulley</a>
+            </div>
+        </nav>
+    </nav>
+</nav>
 
 <ul class="topNav">
     <a href="index.html">About</a>
@@ -29,7 +49,8 @@
         This project involved conceptualizing and modelling a metal chair that could withstand up to 300 lbs. of
         simulated pressure while maintaining less than an inch of displacement. The challenge was that the model
         could not contain any supporting material below the seat of the chair. Additionally, the model had to be as
-        thin and light as possible. In designing my chair, I chose aluminum for its lightweight properties and made use of 
+        thin and light as possible. In designing my chair, I chose aluminum for its lightweight properties and made use
+        of
         archs and circular cut-outs to minimize the costs while maintaining structural integrity.
     </div>
 </div>
