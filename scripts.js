@@ -1,8 +1,9 @@
 var Bench_Table = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43eeaf688337182486?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" ';
-var Metal_Chair = 'https://montclair225.autodesk360.com/g/shares/SH35dfcQT936092f0e43da228a37809cc03d?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" ';
-var Dough_Mixer = 'https://montclair225.autodesk360.com/g/shares/SH35dfcQT936092f0e43e8e02ae73ccad9f9?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ';
-var Knife_Handle = 'https://montclair225.autodesk360.com/g/shares/SH35dfcQT936092f0e434b0caddc08fb620a?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ';
-var Drive_Pulley = 'https://montclair225.autodesk360.com/g/shares/SH35dfcQT936092f0e43fd87fc9973054022?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ';
+var Metal_Chair = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43da228a37809cc03d?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" ';
+var Dough_Mixer = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e436fdc65471082c9f8?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" ';
+var Knife_Handle = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e4375461eea497cc455?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" ';
+var Drive_Pulley = 'https://montclair225.autodesk360.com/shares/public/SH35dfcQT936092f0e43fd87fc9973054022?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" ';
+fullscreenContent = document.getElementById("fullscreen");
 
 
 // image gallery
@@ -35,7 +36,7 @@ function showSlides(n) {
 
 
 // Mobile Navigation Sticky
-let navbar = document.getElementById("mobileNavigation");
+let navbar = document.getElementById("mobileNavHeader");
 let navPos = navbar.getBoundingClientRect().top;
 let spacer = document.getElementById("spacer");
 
@@ -51,12 +52,16 @@ window.addEventListener("scroll", e => {
 });
 
 
-fullscreenContent = document.getElementById("fullscreen");
-
 function openFullscreen(content) {
-  div = "<iframe style=\"border:none; \" src=' " + content + " \' </iframe>";
-  fullscreenContent.innerHTML += div;
-  fullscreenContent.style.display = "block";
+
+  if (window.screen.width < 600) {
+    open(content, '_blank')
+  }
+  else {
+    div = "<iframe style=\"border:none; \" src=' " + content + " \' </iframe>";
+    fullscreenContent.innerHTML += div;
+    fullscreenContent.style.display = "block";
+  }
 }
 
 // document.getElementById('id').style.pointerEvents = 'auto'; 
