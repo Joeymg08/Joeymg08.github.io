@@ -72,8 +72,6 @@ function openFullscreen(content) {
   }
 }
 
-// document.getElementById('id').style.pointerEvents = 'auto'; 
-
 function closeFullscreen() {
   fullscreenContent.innerHTML = '<div id="exit" onclick="closeFullscreen()">Exit</div>'
   fullscreenContent.style.display = "none";
