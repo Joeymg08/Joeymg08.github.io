@@ -5,27 +5,6 @@ var Knife_Handle = 'https://montclair225.autodesk360.com/g/shares/SH35dfcQT93609
 var Drive_Pulley = 'https://montclair225.autodesk360.com/g/shares/SH35dfcQT936092f0e43fd87fc9973054022?mode=embed" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ';
 
 
-fullscreenContent = document.getElementById("fullscreen");
-
-function openFullscreen(content) {
-  div = "<iframe style=\"border:none; \" src=' " + content + " \' </iframe>";
-  fullscreenContent.innerHTML += div;
-  fullscreenContent.style.display = "block";
-}
-
-// document.getElementById('id').style.pointerEvents = 'auto'; 
-
-function closeFullscreen() {
-  fullscreenContent.innerHTML = '<div id="exit" onclick="closeFullscreen()">Exit</div>'
-  fullscreenContent.style.display = "none";
-}
-
-document.addEventListener('keydown', evt => {
-  if (evt.key === 'Escape') {
-    closeFullscreen();
-  }
-});
-
 // image gallery
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -54,11 +33,41 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " activeDot";
 }
 
-// mobilenav
-// document.querySelector( ".arrowContainer" ).click(function() {
-//   document.querySelector(this).classList.toggle("leftBarAfter");
-// });
 
-// document.querySelector( ".arrowContainer" ).click(function() {
-//   document.querySelector(this).classList.toggle("rightBarAfter");
-// });
+// Mobile Navigation Sticky
+let navbar = document.getElementById("mobileNavigation");
+let navPos = navbar.getBoundingClientRect().top;
+let spacer = document.getElementById("spacer");
+
+window.addEventListener("scroll", e => {
+  let scrollPos = window.scrollY;
+  if (scrollPos > navPos) {
+    navbar.classList.add('sticky');
+    spacer.classList.add('navbarOffsetMargin');
+  } else {
+    navbar.classList.remove('sticky');
+    spacer.classList.remove('navbarOffsetMargin');
+  }
+});
+
+
+fullscreenContent = document.getElementById("fullscreen");
+
+function openFullscreen(content) {
+  div = "<iframe style=\"border:none; \" src=' " + content + " \' </iframe>";
+  fullscreenContent.innerHTML += div;
+  fullscreenContent.style.display = "block";
+}
+
+// document.getElementById('id').style.pointerEvents = 'auto'; 
+
+function closeFullscreen() {
+  fullscreenContent.innerHTML = '<div id="exit" onclick="closeFullscreen()">Exit</div>'
+  fullscreenContent.style.display = "none";
+}
+
+document.addEventListener('keydown', evt => {
+  if (evt.key === 'Escape') {
+    closeFullscreen();
+  }
+});
