@@ -64,7 +64,30 @@
   .topNav {
     overflow: hidden;
     text-align: center;
+    background-color: #262626;
   }
+
+  /* #navHeader.sticky{
+    position: fixed;
+    top: 0.5vw;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: auto;
+    z-index: 99;
+  } */
+  /* #topNav.sticky{
+    animation: fadeInUp 0.2s;
+    margin: 0;
+    top: 0;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    background: rgb(60, 60, 60);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 2.5em;
+  } */
+  /* .navbarOffsetMargin {
+    padding-top: 4vw;
+} */
 
   .mobileNavContainer {
     display: none;
@@ -161,7 +184,10 @@
     z-index: 11;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
-  #exit:hover{cursor:pointer;}
+
+  #exit:hover {
+    cursor: pointer;
+  }
 
   body {
     background: #262626;
@@ -236,9 +262,28 @@
 
   .imageLink {
     inline-size: 10vw;
-    border-radius: 1em;
+    border-radius: 10%;
     display: inline-block;
     vertical-align: middle;
+  }
+
+  .headshot {
+    border-radius: 50%;
+    inline-size: 15em;
+    margin: 2vw;
+    shape-outside: circle();
+    float: left;
+  }
+
+  .headshotColumn {
+    color: white;
+    padding: 2vw;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .headshotText {
+    font-size: 1.4vw;
   }
 
   #viewin3D {
@@ -291,6 +336,9 @@
 
     .spacer {
       height: 0;
+    }
+    .brSpacer{
+      height: 2.7vw;
     }
 
     #viewin3D {
@@ -349,6 +397,10 @@
       width: 60%;
     }
 
+    .headshotText {
+      font-size: 2.5vw;
+    }
+
     #viewin3D {
       right: 2vw;
       bottom: 2.75vw;
@@ -356,7 +408,7 @@
       padding: 0.75vw 1.75vw;
     }
 
-    #exit{
+    #exit {
       right: 2vw;
       bottom: 2.75vw;
       font-size: 3vw;
@@ -443,6 +495,25 @@
       width: 60%;
     }
 
+    .headshot {
+      display: inline-block;
+      float: none;
+      width: 55%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+
+    .headshotText {
+      font-size: 4.25vw;
+    }
+
+    .brSpacer{
+      height: 0px;
+    }
+
+
     #csBenchGallery {
       max-width: 100%;
     }
@@ -450,8 +521,8 @@
     #knifeHandleGallery {
       max-width: 100%;
     }
-    
-    .mySlides{
+
+    .mySlides {
       pointer-events: none;
     }
 
@@ -478,7 +549,7 @@
       bottom: 3vw;
     }
 
-    #exit{
+    #exit {
       right: 1.5vw;
       bottom: 3vw;
       font-size: 5vw;

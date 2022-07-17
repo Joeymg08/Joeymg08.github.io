@@ -44,20 +44,40 @@ function showSlides(n) {
 
 
 // Mobile Navigation Sticky
-let navbar = document.getElementById("mobileNavHeader");
-let navPos = navbar.getBoundingClientRect().top;
-let spacer = document.getElementById("spacer");
+let navbarMobile = document.getElementById("mobileNavHeader");
+let navPosMobile = navbarMobile.getBoundingClientRect().top;
+let spacerMobile = document.getElementById("spacer");
 
 window.addEventListener("scroll", e => {
-  let scrollPos = window.scrollY;
-  if (scrollPos > navPos) {
-    navbar.classList.add('sticky');
-    spacer.classList.add('navbarOffsetMargin');
+  let scrollPosMobile = window.scrollY;
+  if (scrollPosMobile > navPosMobile) {
+    navbarMobile.classList.add('sticky');
+    spacerMobile.classList.add('navbarOffsetMargin');
   } else {
-    navbar.classList.remove('sticky');
-    spacer.classList.remove('navbarOffsetMargin');
+    navbarMobile.classList.remove('sticky');
+    spacerMobile.classList.remove('navbarOffsetMargin');
   }
 });
+
+// Desktop Navigation Sticky
+
+// let navbar = document.getElementById("navHeader");
+// let topNav = document.getElementById("topNav");
+// let navPos = navbar.getBoundingClientRect().top;
+// let spacer = document.getElementById("spacer");
+
+// window.addEventListener("scroll", e => {
+//   let scrollPos = window.scrollY;
+//   if (scrollPos > navPos) {
+//     navbar.classList.add('sticky');
+//     topNav.classList.add('sticky');
+//     spacer.classList.add('navbarOffsetMargin');
+//   } else {
+//     navbar.classList.remove('sticky');
+//     topNav.classList.remove('sticky');
+//     spacer.classList.remove('navbarOffsetMargin');
+//   }
+// });
 
 
 function openFullscreen(content) {
