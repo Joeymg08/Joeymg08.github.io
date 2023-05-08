@@ -85,6 +85,18 @@ $(document).ready(function () {
                 var container = $("<div>").addClass("food-container").append(img, description);
                 var row;
 
+                var closeButton = $("<div>").addClass("close-button");
+                var icon = $("<i>").addClass("fa fa-times");
+                closeButton.append(icon);
+
+                closeButton.click(function () {
+                    // Remove the container when the button is clicked
+                    container.remove();
+                });
+
+                var closeButtonContainer = $("<div>").addClass("close-button-container").append(closeButton);
+                container.append(closeButtonContainer);
+
                 if (currentFoodIndex === 0) {
                     $("#food-row").empty();
                     row = $("<div>").addClass("food-row").append(container);
