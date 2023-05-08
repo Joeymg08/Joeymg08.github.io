@@ -2,32 +2,55 @@
 <html lang="en">
 
 <head>
-  <link rel="shortcut icon" type="image/png" href="favicon.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OneMorning</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 
 <body>
-  <div class="header">
-    <h1>OneMorning</h1>
-    <p>Search for an article of clothing:</p>
-  </div>
 
+<h1 id="heading">Plan for </h1>
+
+
+  <!-- <div class="settings-btn-container">
+    <button class="settings-btn">
+      <i class="fa fa-cog"></i>
+    </button>
+  </div>
+   -->
+  <div class="settings-menu">
+    <div class="settings-header">
+      <h2>Settings</h2>
+      <button class="close-btn">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+    <div class="toggle-container">
+      <label for="gender-toggle">Gender of clothing:</label>
+      <label class="toggle-switch">
+        <input type="checkbox" id="gender-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+  
+
+
+  
   <div class="search-bar">
-    <input type="text" id="clothing-search-input" class="search-input" placeholder="Search...">
+    <input type="text" id="clothing-search-input" class="search-input" placeholder="Search for an article of clothing...">
     <button type="button" id="clothing-search-button" class="search-button">Search</button>
   </div>
 
   <div class="clothing-row" id="clothing-container"></div>
 
-  <div class="header">
-    <p>Search for food:</p>
-  </div>
+  <div class="header"></div>
 
   <div class="search-bar">
-    <input type="text" id="food-search-input" class="search-input" placeholder="Search...">
+    <input type="text" id="food-search-input" class="search-input" placeholder="Search for a food...">
     <button type="button" id="food-search-button" class="search-button">Search</button>
   </div>
 
@@ -35,6 +58,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="app.js"></script>
+  
 </body>
 
 </html>
