@@ -18,7 +18,11 @@ body {
     color: #fff;
 }
 
-.header-image{
+.mobile-header {
+    display: none;
+}
+
+.header-image {
     padding: 0;
     margin: 0;
 }
@@ -95,11 +99,13 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.sidebar nav a, i{
+.sidebar nav a,
+i {
     transition: all 0.15s ease;
 }
 
-.sidebar nav a:hover, i:hover{
+.sidebar nav a:hover,
+i:hover {
     color: var(--accent-color);
 }
 
@@ -109,6 +115,7 @@ body {
     transition: filter 0.3s ease;
     filter: grayscale(100%) brightness(2);
 }
+
 .monogram-icon:hover {
     filter: grayscale(0%) brightness(1);
 }
@@ -186,6 +193,7 @@ h6 {
     height: 10px;
     border-radius: 2em !important;
 }
+
 .carousel-indicators .active {
     background-color: var(--accent-color);
 }
@@ -196,11 +204,11 @@ h6 {
 
 .subtitle {
     font-size: 0.7em;
-    color: #adadad; 
+    color: #adadad;
     font-style: italic;
     width: auto;
     padding-top: 0.25em;
-  }  
+}
 
 .skills .skill {
     display: flex;
@@ -221,6 +229,7 @@ h6 {
 .email-contact {
     color: var(--accent-color);
 }
+
 .email-contact i {
     margin-right: 5px;
 }
@@ -228,6 +237,16 @@ h6 {
 .email-contact:hover {
     color: var(--accent-color);
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Narrow screen specific styles */
 @media (max-width: 1250px) {
@@ -244,14 +263,12 @@ h6 {
     }
 }
 
-
 /* Mobile-specific styles */
 @media (max-width: 875px) {
-
     html {
         font-size: 100%;
     }
-    
+
     .sidebar {
         width: 100%;
         height: auto;
@@ -260,15 +277,18 @@ h6 {
         padding: 10px;
     }
 
+    #title {
+        font-size: 1.25em;
+        margin-bottom: 0.25em;
+    }
+
     .profile-image {
         width: 100px;
         height: 100px;
     }
 
-    .sidebar nav a {
-        display: inline-block;
-        margin: 5px 10px;
-        text-align: left;
+    .sidebar nav {
+        display: none;
     }
 
     .content-wrapper {
@@ -293,8 +313,38 @@ h6 {
         margin: 0 0 10px 0;
     }
 
-    .sidebar .social-icons a{
+    .sidebar .social-icons a {
         display: none;
     }
 
+    .mobile-header {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        margin-top: 0;
+        display: block;
+        /* margin: 5px; */
+        /* border-radius: 3em; */
+        width: 100%;
+        background-color: var(--accent-color);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+        z-index: 1000; /* Ensure it stays on top */
+      }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 1.2em;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #deedff;
+    }
+
+    nav a.active {
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
 }

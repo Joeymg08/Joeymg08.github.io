@@ -1,13 +1,13 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Smooth scrolling for sidebar links
-    $('.sidebar nav a, .sidebar div a').on('click', function(event) {
+    $('.sidebar nav a, .sidebar div a, .mobile-header nav a').on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
 
             $('html, body').stop().animate({
                 scrollTop: $(hash).offset().top
-            }, 800, function() {
+            }, 800, function () {
                 window.location.hash = hash;
 
                 // Directly update active link after scrolling
@@ -20,10 +20,13 @@ $(document).ready(function() {
     function updateActiveLink(hash) {
         $('.sidebar nav a.active').removeClass('active');
         $('.sidebar nav a[href="' + hash + '"]').addClass('active');
+
+        $('.mobile-header nav a.active').removeClass('active');
+        $('.mobile-header nav a[href="' + hash + '"]').addClass('active');
     }
 
     // Highlight active link on scroll
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var scrollDistance = $(window).scrollTop();
         var documentHeight = $(document).height();
         var windowHeight = $(window).height();
@@ -38,7 +41,7 @@ $(document).ready(function() {
 
         var currentSection = '#about'; // Default to the first section
 
-        $('.section').each(function(i) {
+        $('.section').each(function (i) {
             var sectionTop = $(this).offset().top;
             var sectionBottom = sectionTop + $(this).outerHeight();
 
@@ -55,29 +58,30 @@ $(document).ready(function() {
 
         updateActiveLink(currentSection);
     }).scroll();
+});
 
-    $('.carousel').on('touchstart', function(event){
-        const xClick = event.originalEvent.touches[0].pageX;
-        $(this).carousel('pause'); // Pause the carousel on touch start
-    
-        $(this).one('touchmove', function(event){
-            const xMove = event.originalEvent.touches[0].pageX;
-            const sensitivityInPx = 5;
-    
-            if ( Math.floor(xClick - xMove) > sensitivityInPx ){
-                $(this).carousel('next');
-            }
-            else if ( Math.floor(xClick - xMove) < -sensitivityInPx ){
-                $(this).carousel('prev');
-            }
-        });
-    
-        $(this).on('touchend', function(){
-            $(this).off('touchmove'); // Unbind touchmove event
-            setTimeout(() => {
-                $(this).carousel('cycle'); // Restart the carousel after a short delay
-            }, 500); // Adjust the delay as needed
-        });
+// Mobile Scripts
+
+$('.carousel').on('touchstart', function (event) {
+    const xClick = event.originalEvent.touches[0].pageX;
+    $(this).carousel('pause'); // Pause the carousel on touch start
+
+    $(this).one('touchmove', function (event) {
+        const xMove = event.originalEvent.touches[0].pageX;
+        const sensitivityInPx = 5;
+
+        if (Math.floor(xClick - xMove) > sensitivityInPx) {
+            $(this).carousel('next');
+        }
+        else if (Math.floor(xClick - xMove) < -sensitivityInPx) {
+            $(this).carousel('prev');
+        }
     });
 
+    $(this).on('touchend', function () {
+        $(this).off('touchmove'); // Unbind touchmove event
+        setTimeout(() => {
+            $(this).carousel('cycle'); // Restart the carousel after a short delay
+        }, 500); // Adjust the delay as needed
+    });
 });
