@@ -1,12 +1,28 @@
 $(document).ready(function () {
     // Smooth scrolling for sidebar links
-    $('.sidebar nav a, .sidebar div a, .mobile-header nav a').on('click', function (event) {
+    $('.sidebar nav a, .sidebar div a').on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
 
             $('html, body').stop().animate({
                 scrollTop: $(hash).offset().top
+            }, 800, function () {
+                window.location.hash = hash;
+
+                // Directly update active link after scrolling
+                updateActiveLink(hash);
+            });
+        }
+    });
+
+    $('.mobile-header nav a').on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').stop().animate({
+                scrollTop: $(hash).offset().top - 150
             }, 800, function () {
                 window.location.hash = hash;
 
