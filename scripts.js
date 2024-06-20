@@ -39,7 +39,49 @@ $(document).ready(function () {
 
         $('.mobile-header nav a.active').removeClass('active');
         $('.mobile-header nav a[href="' + hash + '"]').addClass('active');
+
+        // Scroll the navbar to the active link if mobile header is visible
+        if ($('.mobile-header').css('display') === 'block') {
+            scrollToActiveNavLink($('.mobile-header nav a.active'));
+        }
     }
+
+    // Function to scroll the navbar to the active link
+function scrollToActiveNavLink(activeLink) {
+    var nav = activeLink.closest('nav');
+    var navScrollLeft = nav.scrollLeft();
+    var navWidth = nav.outerWidth();
+    var linkPosition = activeLink.position().left + navScrollLeft;
+    var linkWidth = activeLink.outerWidth();
+    var overscroll = 20; // Additional pixels to overscroll
+
+    var newScrollLeft = 0;
+
+    if (activeLink.text().trim() === "About" || activeLink.text().trim() === "Skills" || activeLink.text().trim() === "Projects") {
+        newScrollLeft = 0; // Scroll all the way to the left
+    } else if (activeLink.text().trim() === "Entrepreneurship" || activeLink.text().trim() === "Contact") {
+        newScrollLeft = nav[0].scrollWidth - navWidth; // Scroll all the way to the right
+    }
+
+    // Smooth scroll animation using setTimeout
+    var duration = 400;
+    var start = performance.now();
+
+    function animateScroll(timestamp) {
+        var progress = timestamp - start;
+        var percent = Math.min(progress / duration, 1);
+        var easing = 0.5 - Math.cos(percent * Math.PI) / 2; // Easing function for smooth scroll
+
+        nav.scrollLeft(navScrollLeft + (newScrollLeft - navScrollLeft) * easing);
+
+        if (percent < 1) {
+            requestAnimationFrame(animateScroll);
+        }
+    }
+
+    requestAnimationFrame(animateScroll);
+}
+
 
     // Highlight active link on scroll
     $(window).scroll(function () {
