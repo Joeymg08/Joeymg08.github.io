@@ -338,11 +338,13 @@ h6 {
         display: flex;
         justify-content: space-around;
         padding: 1.2em;
+        overflow-x: auto;
     }
 
     nav a {
         text-decoration: none;
         color: #deedff;
+        /* padding-right: 1.5em; */
     }
 
     nav a:hover {
@@ -354,5 +356,38 @@ h6 {
         font-weight: bold;
         color: white;
         text-decoration: none;
+    }
+
+    .modal-dialog {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .modal-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+    }
+
+    .modal-body {
+        padding: 0 !important;
+    }
+
+    .modal-body .close {
+        position: absolute;
+        top: -30px;
+        right: -300px;
+        z-index: 1051;
+        color: white;
+        font-size: 3em;
+    }
+
+    #modalImage {
+        max-height: 80vh;
+        width: auto;
     }
 }
