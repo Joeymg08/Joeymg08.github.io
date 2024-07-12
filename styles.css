@@ -188,14 +188,14 @@ h6 {
 }
 
 .carousel-indicators li {
-    background-color: rgba(0, 0, 0, 0.65);
-    width: 10px;
-    height: 10px;
+    background-color: rgba(114, 114, 114, 0.6) !important;
+    width: 10px !important;
+    height: 10px !important;
     border-radius: 2em !important;
 }
 
 .carousel-indicators .active {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color) !important;
 }
 
 .project div p {
@@ -245,6 +245,22 @@ h6 {
     z-index: 1000;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Viewer Modal */
+
+.modal-body .carousel-inner {
+    border-radius: 1em !important;
+}
+
+.modal-body .btn-close{
+    border-radius: 2em !important;
+    background-color: #909090bb !important;
+    padding: 0.5em !important;
+    margin: 0.5em !important;
+}
+.modal-body .btn-close svg{
+    fill: #000000 !important;
 }
 
 
@@ -356,38 +372,5 @@ h6 {
         font-weight: bold;
         color: white;
         text-decoration: none;
-    }
-
-    .modal-dialog {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
-
-    .modal-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: none;
-        border: none;
-    }
-
-    .modal-body {
-        padding: 0 !important;
-    }
-
-    .modal-body .close {
-        position: absolute;
-        top: -30px;
-        right: -300px;
-        z-index: 1051;
-        color: white;
-        font-size: 3em;
-    }
-
-    #modalImage {
-        max-height: 80vh;
-        width: auto;
     }
 }
